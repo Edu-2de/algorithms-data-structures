@@ -7,28 +7,34 @@ class Stack:
     def __init__(self):
         self.head = None
 
+    def isEmpty(self):
+        if self.head == None:
+            return True
+        else:
+            return False
+
     def push(self, newData):
         newNodo = No(newData)
-        if(self.head == None):
+        if(self.isEmpty() == True):
             self.head = newNodo
             return
         newNodo.prev = self.head
         self.head = newNodo
 
     def pop(self):
-        if(self.head == None):
+        if(self.isEmpty() == True):
             print("Nothin to remove!")
             return 
+        temp_val = self.head
         self.head = self.head.prev
-    
+        return temp_val.data
+
     def peek(self):
-        return self.head.data
-    
-    def isEmpty(self):
-        if self.head == None:
-            return True
+        if(self.isEmpty() == False):
+            return self.head.data
         else:
-            return False
+            return "Stack is empty!"
+  
 
     def __str__(self):
         actual = self.head
@@ -49,6 +55,7 @@ test.push(3)
 test.push(4)
 test.push(5)
 print(test)
+test.pop()
 test.pop()
 test.pop()
 print(test)
