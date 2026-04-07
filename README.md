@@ -13,7 +13,7 @@ To run the scripts in this repository, you need to have Python installed on your
 Clone this repository and run the individual scripts using the terminal.
 
 ```bash
-git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-cd seu-repositorio
+git clone [https://github.com/Edu-2de/algorithms-data-structures.gitt](https://github.com/Edu-2de/algorithms-data-structures.git)
+cd algorithms-data-structures
 python path/to/specific_script.py
 ```
