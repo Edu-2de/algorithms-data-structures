@@ -20,14 +20,22 @@ class Stack:
             print("Nothin to remove!")
             return 
         self.head = self.head.prev
+    
+    def peek(self):
+        return self.head.data
+    
+    def isEmpty(self):
+        if self.head == None:
+            return True
+        else:
+            return False
 
     def __str__(self):
         actual = self.head
         values = ""
         count = 0
         if actual == None:
-            print("Stack is empty!")
-            return
+            return "Stack is empty!"
         while actual != None:
             values += f"position:({count}) - value: {actual.data}\n"
             count += 1
